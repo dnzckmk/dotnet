@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ClassLibrary;
+using System;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp
@@ -17,12 +15,12 @@ namespace WindowsFormsApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Run Greet form with arguments
             if(args.Length > 0 ) {
-                Application.Run(new Greet(args[0]));
+                Application.Run(new Greet(args));
             }
-            else
-            {
-                Application.Run(new Greet("Unknown"));
+            else {
+                Application.Run(new Greet(new string[0]));
             }
         }
     }

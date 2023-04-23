@@ -1,8 +1,24 @@
-﻿
-Console.Write("Enter your username: ");
-string username = Console.ReadLine();
+﻿using ClassLibrary;
 
-var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
-var formsAppPath = Path.GetDirectoryName(location.Substring(0, location.IndexOf("ConsoleApp"))) + "\\WindowsFormsApp\\bin\\Debug\\WindowsFormsApp.exe";
+Console.WriteLine("Type 'exit' to close the app.");
+string text;
+do {
+    Console.Write("Enter your username: ");
+    text = Console.ReadLine();
 
-System.Diagnostics.Process.Start(formsAppPath, username);
+    if (String.IsNullOrWhiteSpace(text))
+        Console.WriteLine("Please enter valid username.");
+    else if(text == "exit")
+        Environment.Exit(0);
+}
+while (String.IsNullOrWhiteSpace(text));
+
+//Path of WinForm App
+string location = System.Reflection.Assembly.GetExecutingAssembly().Location;
+string formsAppPath = Path.GetDirectoryName(location.Substring(0, location.IndexOf("ConsoleApp"))) + "\\WindowsFormsApp\\bin\\Debug\\WindowsFormsApp.exe";
+
+//Concat text
+string message = GreetLibrary.GreetUser(text);
+Console.WriteLine(message);
+
+System.Diagnostics.Process.Start(formsAppPath, message);
