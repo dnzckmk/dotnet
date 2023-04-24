@@ -3,13 +3,13 @@
 
 Task 1:
 Create 3 basic applications for the following .NET platforms:
-.NET Core – console
-.NET Framework – WinForms/WPF
+- .NET Core – console
+- .NET Framework – WinForms/WPF
 
 
 Application requirements:
-Input: {username} (for console app – as a command line parameter)
-Output: “Hello, {username}” (via form or separate window) 
+- Input: {username} (for console app – as a command line parameter)
+- Output: “Hello, {username}” (via form or separate window) 
 
 
 Task 2:  
