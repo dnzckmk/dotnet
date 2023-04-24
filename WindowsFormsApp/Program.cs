@@ -1,5 +1,6 @@
 ﻿using ClassLibrary;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp
@@ -16,12 +17,7 @@ namespace WindowsFormsApp
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Run Greet form with arguments
-            if(args.Length > 0 ) {
-                Application.Run(new Greet(args));
-            }
-            else {
-                Application.Run(new Greet(new string[0]));
-            }
+            Application.Run(new Greet(args));
         }
     }
 }

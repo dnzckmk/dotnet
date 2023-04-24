@@ -8,10 +8,7 @@ namespace WindowsFormsApp
         public Greet(string[] args)
         {
             InitializeComponent();
-
-            var message = "";
-            Array.ForEach(args, (arg) => { message += arg; });
-            lblGreet.Text = message;
+            lblGreet.Text = string.Join(" ", args);
         }
     }
 }

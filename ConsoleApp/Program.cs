@@ -6,12 +6,12 @@ do {
     Console.Write("Enter your username: ");
     text = Console.ReadLine();
 
-    if (String.IsNullOrWhiteSpace(text))
+    if (string.IsNullOrWhiteSpace(text))
         Console.WriteLine("Please enter valid username.");
     else if(text == "exit")
         Environment.Exit(0);
 }
-while (String.IsNullOrWhiteSpace(text));
+while (string.IsNullOrWhiteSpace(text));
 
 //Path of WinForm App
 string location = System.Reflection.Assembly.GetExecutingAssembly().Location;
